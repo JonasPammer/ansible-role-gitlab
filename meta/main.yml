@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: "gitlab"
-  description: "An ansible role for GitLab Git web interface."
+  description: "An ansible role for GitLab Git web interface. Fork of geerlingguy.gitlab"
 
   author: "jonaspammer"
   license: "MIT"

@@ -30,6 +30,24 @@ root
 5iveL!fe
 ....
 
+[NOTE]
+.DISCLAIMER
+=====
+This role is a fork of https://github.com/geerlingguy/ansible-role-gitlab[geerlingguy/ansible-role-gitlab v3.2.0 (26 November, 2021)] (MIT License, Copyright 2017 Jeff Geerling), which is no longer being maintained and has been archived with the following very understandable disclaimer:
+
+[quote]
+Deprecated: In September 2023, I deprecated this role as I am no longer maintaining any GitLab instances, and use Gitea instead for my personal work. Please consider forking this role or use someone else's GitLab role.
+
+The role itself is still good and working as can be seen by its
+https://star-history.com/#geerlingguy/ansible-role-gitlab[constant star rise] (currently 700)
+even though there's been no commit since 2 years. +
+I made this fork to fix this outlying issue I encountered on my own infra:
+
+* https://github.com/geerlingguy/ansible-role-gitlab/issues/221[Make installation timeout configurable (#221)]
+
+// it also gave me insight into forking
+=====
+
 toc::[]
 
 [[meta]]
