@@ -1,0 +1,15 @@
+---
+# vars file of ansible-role jonaspammer.gitlab
+# (tl;dr: almost not overwrite-able variables)
+
+_gitlab__somevar:
+  Debian: ""
+  Debian_10: ""
+  RedHat: ""
+
+gitlab__somevar: "{{
+  _gitlab__somevar[ansible_distribution ~ '_' ~ ansible_distribution_major_version]|default(
+  _gitlab__somevar[ansible_os_family ~ '_' ~ ansible_distribution_major_version])|default(
+  _gitlab__somevar[ansible_distribution])|default(
+  _gitlab__somevar[ansible_os_family])|default(
+  _gitlab__somevar['default']) }}"
