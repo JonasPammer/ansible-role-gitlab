@@ -8,6 +8,17 @@ GitLab’s default administrator account details are below; be sure to login imm
     root
     5iveL!fe
 
+DISCLAIMER
+
+This role is a fork of [geerlingguy/ansible-role-gitlab v3.2.0 (26 November, 2021)](https://github.com/geerlingguy/ansible-role-gitlab) (MIT License, Copyright 2017 Jeff Geerling), which is no longer being maintained and has been archived with the following very understandable disclaimer:
+
+> Deprecated: In September 2023, I deprecated this role as I am no longer maintaining any GitLab instances, and use Gitea instead for my personal work. Please consider forking this role or use someone else’s GitLab role.
+
+The role itself is still good and working as can be seen by its [constant star rise](https://star-history.com/#geerlingguy/ansible-role-gitlab) (currently 700) even though there’s been no commit since 2 years.  
+I made this fork to fix this outlying issue I encountered on my own infra:
+
+-   [Make installation timeout configurable (#221)](https://github.com/geerlingguy/ansible-role-gitlab/issues/221)
+
 # 🔎 Metadata
 
 Below you can find information on…
@@ -23,7 +34,7 @@ Below you can find information on…
     ---
     galaxy_info:
       role_name: "gitlab"
-      description: "An ansible role for GitLab Git web interface."
+      description: "An ansible role for GitLab Git web interface. Fork of geerlingguy.gitlab"
 
       author: "jonaspammer"
       license: "MIT"
