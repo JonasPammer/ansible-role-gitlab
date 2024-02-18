@@ -1,4 +1,6 @@
 ---
+# handlers file of ansible-role jonaspammer.gitlab
+
 - name: restart gitlab
   command: gitlab-ctl reconfigure
   register: gitlab_restart
