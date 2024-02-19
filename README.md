@@ -350,12 +350,6 @@ A role may work on different **distributions**, like Red Hat Enterprise Linux (R
 
 The tested ansible versions try to stay equivalent with the [ support pattern of Ansible’s `community.general` collection](https://github.com/ansible-collections/community.general#tested-with-ansible). As of writing this is:
 
--   2.13 (Ansible 6)
-
--   2.14 (Ansible 7)
-
--   2.15 (Ansible 8)
-
 -   2.16 (Ansible 9)
 
 # 📝 Development
