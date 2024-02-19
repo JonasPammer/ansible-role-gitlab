@@ -4,7 +4,7 @@
 
 _gitlab__package_version_separator:
   default: "="
-  RedHat: '-'
+  RedHat: "-"
 _gitlab__repository_installation_script_url:
   default: "https://packages.gitlab.com/install/repositories/gitlab/{{ gitlab_edition }}/script.deb.sh"
   RedHat: "https://packages.gitlab.com/install/repositories/gitlab/{{ gitlab_edition }}/script.rpm.sh"

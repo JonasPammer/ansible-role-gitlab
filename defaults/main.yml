@@ -7,7 +7,7 @@ gitlab_domain: gitlab
 gitlab_external_url: "https://{{ gitlab_domain }}/"
 gitlab_git_data_dir: "/var/opt/gitlab/git-data"
 gitlab_edition: "gitlab-ce"
-gitlab_version: ''
+gitlab_version: ""
 gitlab_backup_path: "/var/opt/gitlab/backups"
 gitlab_config_template: "gitlab.rb.j2"
 
@@ -27,7 +27,7 @@ gitlab_ldap_port: "389"
 gitlab_ldap_uid: "sAMAccountName"
 gitlab_ldap_method: "plain"
 gitlab_ldap_bind_dn: "CN=Username,CN=Users,DC=example,DC=com"
-gitlab_ldap_password: "password"
+gitlab_ldap_password: "password" # pragma: allowlist secret
 gitlab_ldap_base: "DC=example,DC=com"
 
 # SMTP Configuration
@@ -35,7 +35,7 @@ gitlab_smtp_enable: false
 gitlab_smtp_address: "smtp.server"
 gitlab_smtp_port: "465"
 gitlab_smtp_user_name: "smtp user"
-gitlab_smtp_password: "smtp password"
+gitlab_smtp_password: "smtp password" # pragma: allowlist secret
 gitlab_smtp_domain: "example.com"
 gitlab_smtp_authentication: "login"
 gitlab_smtp_enable_starttls_auto: true
@@ -49,7 +49,7 @@ gitlab_nginx_ssl_verify_client: ""
 gitlab_nginx_ssl_client_certificate: ""
 
 # Probably best to leave this as the default, unless doing testing.
-gitlab_restart_handler_failed_when: 'gitlab_restart.rc != 0'
+gitlab_restart_handler_failed_when: "gitlab_restart.rc != 0"
 
 # Dependencies.
 _gitlab_dependencies:
@@ -78,7 +78,7 @@ gitlab_dependencies: "{{
 gitlab_time_zone: "UTC"
 gitlab_backup_keep_time: "604800"
 gitlab_download_validate_certs: true
-gitlab_default_theme: '2'
+gitlab_default_theme: "2"
 
 # Email configuration.
 gitlab_email_enabled: false
