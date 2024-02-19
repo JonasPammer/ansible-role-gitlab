@@ -141,6 +141,14 @@ If you’d like to install a specific version, set the version here
 
 [source,yaml]
 ----
+gitlab_install_async_timeout: 300
+gitlab_install_async_poll: 5
+----
+How long you want Ansible to hold ssh connection during GitLab installation task.
+More Information: https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_async.html
+
+[source,yaml]
+----
 gitlab_config_template: "gitlab.rb.j2"
 ----
 The `+gitlab.rb.j2+` template packaged with this role is meant to be
