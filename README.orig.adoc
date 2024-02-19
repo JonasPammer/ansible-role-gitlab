@@ -123,7 +123,7 @@ If you’d like to install a specific version, set the version here
 
 [source,yaml]
 ----
-gitlab_install_async_timeout: 300
+gitlab_install_async_timeout: 600
 gitlab_install_async_poll: 5
 ----
 How long you want Ansible to hold ssh connection during GitLab installation task.
