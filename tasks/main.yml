@@ -6,9 +6,6 @@
   run_once: true
   delegate_to: localhost
 
-- name: Include OS-specific variables.
-  include_vars: "{{ ansible_os_family }}.yml"
-
 - name: Check if GitLab configuration file already exists.
   stat: path=/etc/gitlab/gitlab.rb
   register: gitlab_config_file
@@ -25,7 +22,7 @@
 
 - name: Download GitLab repository installation script.
   get_url:
-    url: "{{ gitlab_repository_installation_script_url }}"
+    url: "{{ gitlab__repository_installation_script_url }}"
     dest: /tmp/gitlab_install_repository.sh
     validate_certs: "{{ gitlab_download_validate_certs }}"
   when: not gitlab_file.stat.exists
@@ -37,7 +34,7 @@
 
 - name: Define the Gitlab package name.
   set_fact:
-    gitlab_package_name: "{{ gitlab_edition }}{{ gitlab_package_version_separator }}{{ gitlab_version }}"
+    gitlab_package_name: "{{ gitlab_edition }}{{ gitlab__package_version_separator }}{{ gitlab_version }}"
   when: gitlab_version | default(false)
 
 - name: Install GitLab
