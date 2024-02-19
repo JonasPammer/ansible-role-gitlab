@@ -52,12 +52,27 @@ gitlab_nginx_ssl_client_certificate: ""
 gitlab_restart_handler_failed_when: 'gitlab_restart.rc != 0'
 
 # Dependencies.
-gitlab_dependencies:
-  - openssh-server
-  - postfix
-  - curl
-  - openssl
-  - tzdata
+_gitlab_dependencies:
+  default:
+    - openssh-server
+    - postfix
+    - curl
+    - openssl
+    - tzdata
+  # Since `curl` presence is essential for DNF, we should be able to skip installation
+  # of curl to EL systems, as they are all shipped with it as of today.
+  RedHat_9:
+    - openssh-server
+    - postfix
+    - openssl
+    - tzdata
+
+gitlab_dependencies: "{{
+  _gitlab_dependencies[ansible_distribution ~ '_' ~ ansible_distribution_major_version]|default(
+  _gitlab_dependencies[ansible_os_family ~ '_' ~ ansible_distribution_major_version])|default(
+  _gitlab_dependencies[ansible_distribution])|default(
+  _gitlab_dependencies[ansible_os_family])|default(
+  _gitlab_dependencies['default']) }}"
 
 # Optional settings.
 gitlab_time_zone: "UTC"
