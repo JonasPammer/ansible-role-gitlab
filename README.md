@@ -87,7 +87,7 @@ The edition of GitLab to install. Usually either `gitlab-ce` (Community Edition)
 
 If you’d like to install a specific version, set the version here (e.g. `11.4.0-ce.0` for Debian/Ubuntu, or `11.4.0-ce.0.el7` for RedHat/CentOS).
 
-    gitlab_install_async_timeout: 300
+    gitlab_install_async_timeout: 600
     gitlab_install_async_poll: 5
 
 How long you want Ansible to hold ssh connection during GitLab installation task. More Information: <https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_async.html>
