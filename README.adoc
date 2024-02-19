@@ -68,10 +68,6 @@ galaxy_info:
     - name: EL # (Enterprise Linux)
       versions:
         - "9" # actively tested: rockylinux9
-    - name: Fedora
-      versions:
-        - "38" # actively tested: fedora38
-        - "39" # actively tested: fedora39
     - name: Debian
       versions:
         - bullseye # actively tested: debian11
@@ -453,13 +449,6 @@ even though there is no test for this exact distribution.
 | 2022-07
 | 2032-05
 | https://github.com/geerlingguy/docker-rockylinux9-ansible/actions?query=workflow%3ABuild[image:https://github.com/geerlingguy/docker-rockylinux9-ansible/workflows/Build/badge.svg?branch=master[CI]]
-
-// https://endoflife.date/fedora (13 Months)
-| RedHat
-| Fedora 39
-| 2023-11
-| 2024-12
-| https://github.com/geerlingguy/docker-fedora39-ansible/actions?query=workflow%3ABuild[image:https://github.com/geerlingguy/docker-fedora39-ansible/workflows/Build/badge.svg?branch=master[CI]]
 
 // https://ubuntu.com/about/release-cycle
 | Debian
