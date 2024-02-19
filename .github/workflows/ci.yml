@@ -163,6 +163,7 @@ jobs:
       - name: Run Molecule tests (normal).
         run: tox
         env:
+          TOXENV: py3-ansible-9 # latest
           TOX_SKIP_ENV: pre-commit
           MOLECULE_DISTRO: ${{ matrix.distro }}
         if: github.event_name != 'workflow_dispatch'
