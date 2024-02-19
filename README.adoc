@@ -215,7 +215,7 @@ server for centralized authentication.
 gitlab_dependencies:
   - openssh-server
   - postfix
-  - curl
+  - curl # (Removed for RedHat_9: https://github.com/ansible/ansible/issues/82461)
   - openssl
   - tzdata
 ----

@@ -137,7 +137,7 @@ GitLab LDAP configuration; if `gitlab_ldap_enabled` is `true`, the rest of the c
     gitlab_dependencies:
       - openssh-server
       - postfix
-      - curl
+      - curl # (Removed for RedHat_9: https://github.com/ansible/ansible/issues/82461)
       - openssl
       - tzdata
 
