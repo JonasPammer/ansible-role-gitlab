@@ -23,12 +23,6 @@
     name: "{{ gitlab_dependencies }}"
     state: present
 
-- name: Install GitLab dependencies (Debian).
-  apt:
-    name: gnupg2
-    state: present
-  when: ansible_os_family == 'Debian'
-
 - name: Download GitLab repository installation script.
   get_url:
     url: "{{ gitlab_repository_installation_script_url }}"
